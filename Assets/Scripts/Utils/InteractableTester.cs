@@ -83,7 +83,7 @@ namespace Utils
             
             if (_keyIsPressed)
             {
-                newInteracting?.OnTouchEnter();
+                newInteracting?.OnTouchEnter(_interactionType);
             } 
 
             _currentlyInteracting = newInteracting;

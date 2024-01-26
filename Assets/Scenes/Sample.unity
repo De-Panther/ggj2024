@@ -2090,7 +2090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gizmoSize: 0.25
   _gizmoColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  _interactionType: 0
+  _interactionType: 1
 --- !u!4 &1695972800
 Transform:
   m_ObjectHideFlags: 0

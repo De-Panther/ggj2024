@@ -1,3 +1,4 @@
+using Intractables;
 using UnityEngine;
 using Utils;
 
@@ -16,6 +17,7 @@ namespace Interactables.Gameplay
         #region --- Private Fields ---
         
         private bool _isBeingTouched = false;
+        private bool _modifierEnabled = false;
         
         #endregion
         
@@ -32,14 +34,15 @@ namespace Interactables.Gameplay
         private void Update()
         {
             if (!_isBeingTouched) return;
-            
+
             var position = _joint.position;
             var z = Vector3.Distance(CameraUtils.MainCamera.transform.position, position);
             var touchPositionWorld = CameraUtils.MainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, z));
             var touchDirection = touchPositionWorld - position;
-        
-            var angle = Vector3.SignedAngle(_joint.up, touchDirection, -Vector3.forward);
-        
+
+            var angleModifier = _modifierEnabled ? -1 : 1;
+            var angle = Vector3.SignedAngle(_joint.up, touchDirection, -Vector3.forward) * angleModifier; 
+
             _joint.Rotate(Vector3.forward, angle * Time.deltaTime * ROTATION_SPEED, Space.World);
         }
         
@@ -48,10 +51,11 @@ namespace Interactables.Gameplay
 
         #region --- Public Methods ---
         
-        public void OnTouchEnter()
+        public void OnTouchEnter(InteractionType interactionType)
         {
             LoggerService.LogWarning($"OnTouchEnter: {gameObject.name}");
             _isBeingTouched = true;
+            _modifierEnabled = (interactionType == InteractionType.Electrify);
         }
 
         public void OnTouchExit()
