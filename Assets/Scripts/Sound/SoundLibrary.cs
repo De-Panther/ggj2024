@@ -4,7 +4,7 @@ using Utils;
 
 namespace Sound
 {
-    [CreateAssetMenu(fileName = "SoundLibrary", menuName = "Sound/SoundLibrary", order = 0)]
+    [CreateAssetMenu(fileName = "SoundLibrary", menuName = "Game/Sound/SoundLibrary", order = 0)]
     public class SoundLibrary : ScriptableObject
     {
         #region --- Fields ---
@@ -16,6 +16,7 @@ namespace Sound
         
         #region --- Public Methods ---
         
+        // Sound library sits under the resources folder
         public Sound GetSound(string soundName)
         {
             var sound = _sounds.Find(s => s.name == soundName);

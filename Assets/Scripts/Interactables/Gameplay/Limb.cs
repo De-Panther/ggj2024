@@ -35,15 +35,13 @@ namespace Interactables.Gameplay
         {
             if (!_isBeingTouched) return;
 
-            var position = _joint.position;
-            var z = Vector3.Distance(CameraUtils.MainCamera.transform.position, position);
-            var touchPositionWorld = CameraUtils.MainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, z));
-            var touchDirection = touchPositionWorld - position;
+            if (!_modifierEnabled)
+            {
+                RotateBodyAroundHand();
+                return;
+            }
 
-            var angleModifier = _modifierEnabled ? -1 : 1;
-            var angle = Vector3.SignedAngle(_joint.up, touchDirection, -Vector3.forward) * angleModifier; 
-
-            _joint.Rotate(Vector3.forward, angle * Time.deltaTime * ROTATION_SPEED, Space.World);
+            RotateAroundLimb();
         }
         
         #endregion
@@ -62,6 +60,44 @@ namespace Interactables.Gameplay
         {
             LoggerService.LogWarning($"OnTouchExit: {gameObject.name}");
             _isBeingTouched = false;
+        }
+        
+        #endregion
+        
+        
+        #region --- Private Methods ---
+        
+        private void RotateBodyAroundHand()
+        {
+            var rootParent = transform;
+            
+            while (rootParent.parent != null)
+            {
+                rootParent = rootParent.parent;
+            }
+
+            var hand = rootParent;
+            
+            while (hand.childCount > 0)
+            {
+                hand = hand.GetChild(hand.childCount - 1);
+            }
+
+            var rotationAxis = Vector3.forward;
+            rootParent.RotateAround(hand.position, rotationAxis, Time.deltaTime * ROTATION_SPEED * 10f);
+        }
+
+        private void RotateAroundLimb()
+        {
+            var position = _joint.position;
+            var z = Vector3.Distance(CameraUtils.MainCamera.transform.position, position);
+            var touchPositionWorld = CameraUtils.MainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, z));
+            var touchDirection = touchPositionWorld - position;
+
+            var angleModifier = _modifierEnabled ? -1 : 1;
+            var angle = Vector3.SignedAngle(_joint.up, touchDirection, -Vector3.forward) * angleModifier; 
+
+            _joint.Rotate(Vector3.forward, angle * Time.deltaTime * ROTATION_SPEED, Space.World);
         }
         
         #endregion
