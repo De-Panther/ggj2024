@@ -1,4 +1,5 @@
 using Intractables;
+using Progress;
 using UnityEngine;
 using Utils;
 
@@ -26,6 +27,18 @@ namespace Interactables.Gameplay
         
         private const float ROTATION_SPEED = 1.5f;
         private const string WIPER_TAG = "Wiper";
+        private const string ELECTRICITY_SOUND = "electric";
+        private const string LAUGH_SOUND = "laugh";
+        
+        #endregion
+        
+        
+        #region --- Properties ---
+
+        private string LaughSound
+        {
+            get { return LAUGH_SOUND + Random.Range(1, 4); }
+        }
         
         #endregion
         
@@ -55,18 +68,31 @@ namespace Interactables.Gameplay
             LoggerService.LogWarning($"OnTouchEnter: {gameObject.name}");
             _isBeingTouched = true;
             _modifierEnabled = (interactionType == InteractionType.Electrify);
+            PlaySfx(_modifierEnabled);
         }
 
         public void OnTouchExit()
         {
             LoggerService.LogWarning($"OnTouchExit: {gameObject.name}");
             _isBeingTouched = false;
+            StopPlaySfx();
         }
         
         #endregion
         
         
         #region --- Private Methods ---
+        
+        private void PlaySfx(bool isElectrified)
+        {
+            var soundName = isElectrified ? ELECTRICITY_SOUND : LaughSound;
+            GameController.Instance.PlaySfx(soundName);
+        }
+        
+        private void StopPlaySfx()
+        {
+            GameController.Instance.StopPlayingSfx();
+        }
         
         private void RotateBodyAroundHand()
         {

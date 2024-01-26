@@ -18,9 +18,10 @@ namespace Progress
         #endregion
 
         
-        #region --- Constractor ---
+        #region --- Constant ---
         
         private const string SETTINGS_MANAGER_PATH = "SettingsManager";
+        private const string WIND = "wind";
         
         #endregion
         
@@ -49,10 +50,26 @@ namespace Progress
         
         
         #region --- Public Methods ---
-       
+
+        private void Start()
+        {
+            AudioSetup();
+        }
+
         public void StartGame()
         {
             StartCoroutine(GameFlow());
+        }
+        
+        public void PlaySfx(string soundName)
+        {
+            var sound = _settingsManager.SoundLibrary.GetSound(soundName);
+            _settingsManager.SoundSettings.SetSfxAudioClip(sound.clip).Play();
+        }
+        
+        public void StopPlayingSfx()
+        {
+            _settingsManager.SoundSettings.StopSfxAudioClip();
         }
         
         #endregion
@@ -84,6 +101,12 @@ namespace Progress
         {
             var settingsManager = Resources.Load<SettingsManager>(SETTINGS_MANAGER_PATH);
             _settingsManager = Instantiate(settingsManager, transform);
+        }
+
+        private void AudioSetup()
+        {
+            var main = _settingsManager.SoundLibrary.GetSound(WIND);
+            _settingsManager.SoundSettings.SetMainAudioClip(main.clip).Play();
         }
         
         #endregion

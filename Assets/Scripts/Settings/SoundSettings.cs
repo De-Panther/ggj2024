@@ -69,14 +69,16 @@ namespace Settings
             PlayerPrefs.SetInt(ALL_MUTE, isMute ? 1 : 0);
         }
         
-        public void SetMainAudioClip(AudioClip audioClip)
+        public AudioSource SetMainAudioClip(AudioClip audioClip)
         {
             _mainAudioSource.clip = audioClip;
+            return _mainAudioSource;
         }
         
-        public void SetSfxAudioClip(AudioClip audioClip)
+        public AudioSource SetSfxAudioClip(AudioClip audioClip)
         {
             _sfxAudioSource.clip = audioClip;
+            return _sfxAudioSource;
         }
         
         public void PlayMainAudioClip()
