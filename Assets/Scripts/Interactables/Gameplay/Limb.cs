@@ -40,7 +40,6 @@ namespace Interactables.Gameplay
         
             var angle = Vector3.SignedAngle(_joint.up, touchDirection, -Vector3.forward);
         
-            // Rotate the joint towards the touch direction
             _joint.Rotate(Vector3.forward, angle * Time.deltaTime * ROTATION_SPEED, Space.World);
         }
         

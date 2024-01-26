@@ -19,7 +19,9 @@ namespace Utils
         #region --- Private Fields ---
         
         private InputAction _mousePositionAction;
+        private InputAction _keyAction;
         private Vector2 _mousePosition;
+        private bool _keyIsPressed = false;
         private IInteractable _currentlyInteracting;
         
         #endregion
@@ -28,6 +30,7 @@ namespace Utils
         #region --- Constants ---
 
         private const string MOUSE_POSITION_ACTION = "<Mouse>/position";
+        private const string KEY_ACTION = "<Keyboard>/e";
         
         #endregion
         
@@ -39,12 +42,19 @@ namespace Utils
             _mousePositionAction = new InputAction(binding: MOUSE_POSITION_ACTION);
             _mousePositionAction.Enable();
             _mousePositionAction.performed += UpdateMousePosition;
+            _keyAction = new InputAction(binding: KEY_ACTION);
+            _keyAction.Enable();
+            _keyAction.started += _ => _keyIsPressed = true; 
+            _keyAction.canceled += _ => _keyIsPressed = false; 
         }
         
         private void OnDisable()
         {
             _mousePositionAction.performed -= UpdateMousePosition;
             _mousePositionAction.Disable();
+            _keyAction.started -= _ => _keyIsPressed = true;
+            _keyAction.canceled -= _ => _keyIsPressed = false;
+            _keyAction.Disable();
         }   
 
         private void OnDrawGizmos()
@@ -70,7 +80,12 @@ namespace Utils
             if (_currentlyInteracting == newInteracting) return;
             
             _currentlyInteracting?.OnTouchExit();
-            newInteracting?.OnTouchEnter();
+            
+            if (_keyIsPressed)
+            {
+                newInteracting?.OnTouchEnter();
+            } 
+
             _currentlyInteracting = newInteracting;
         }
         
