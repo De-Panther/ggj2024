@@ -70,21 +70,25 @@ namespace Interactables.Gameplay
         private void RotateBodyAroundHand()
         {
             var rootParent = transform;
-            
             while (rootParent.parent != null)
             {
                 rootParent = rootParent.parent;
             }
 
-            var hand = rootParent;
-            
-            while (hand.childCount > 0)
+            var hand = FindHandForCurrentLimb(transform.gameObject, "Wiper");
+
+            if (hand == null)
             {
-                hand = hand.GetChild(hand.childCount - 1);
+                LoggerService.LogError("A child with the tag 'Wiper' wasn't found, for " + transform.name);
+                return;
             }
 
-            var rotationAxis = Vector3.forward;
-            rootParent.RotateAround(hand.position, rotationAxis, Time.deltaTime * ROTATION_SPEED * 10f);
+            var position = hand.transform.position;
+            var initialHandPosition = position;
+
+            rootParent.RotateAround(position, Vector3.forward, Time.deltaTime * ROTATION_SPEED * 10f);
+            var movement = position - initialHandPosition;
+            rootParent.position -= movement;  
         }
 
         private void RotateAroundLimb()
@@ -98,6 +102,26 @@ namespace Interactables.Gameplay
             var angle = Vector3.SignedAngle(_joint.up, touchDirection, -Vector3.forward) * angleModifier; 
 
             _joint.Rotate(Vector3.forward, angle * Time.deltaTime * ROTATION_SPEED, Space.World);
+        }
+        
+        private GameObject FindHandForCurrentLimb(GameObject limb, string tag)
+        {
+            if (limb.gameObject.CompareTag(tag))
+            {
+                return limb.gameObject;
+            }
+
+            foreach (Transform child in limb.transform)
+            {
+                var result = FindHandForCurrentLimb(child.gameObject, tag);
+
+                if (result != null)
+                {
+                    return result;
+                }
+            }
+
+            return null;
         }
         
         #endregion

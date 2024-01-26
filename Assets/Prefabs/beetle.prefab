@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 6632640986326046867}
   m_Layer: 6
   m_Name: wiper_B_R
-  m_TagString: Untagged
+  m_TagString: Wiper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,12 +109,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370912740975586644}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.92387956, y: -0.3826834, z: 0.0000000144459005, w: -0.00000007573465}
-  m_LocalPosition: {x: 0.0000019763409, y: -0.0020530832, z: -0.000040253788}
+  m_LocalRotation: {x: 7.1054274e-15, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0045779245, y: 0.002236249, z: 0.000040254326}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6009239351818630662}
+  m_Father: {fileID: 1673227888012831105}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1866363042599655337
 MeshFilter:
@@ -233,8 +233,8 @@ Transform:
   - {fileID: 6305858953206309388}
   - {fileID: 24671022548745861}
   - {fileID: 8091382533411534505}
-  - {fileID: 8071320024421059272}
   - {fileID: 3940552743085659245}
+  - {fileID: 8071320024421059272}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1281918258658469309
@@ -352,7 +352,8 @@ Transform:
   m_LocalPosition: {x: 0.0016538386, y: 0.0027652641, z: 8.9966826e-11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2993290423840564465}
   m_Father: {fileID: 2737251313084468474}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3282063378907230042
@@ -470,7 +471,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1137143020699789442}
-  - {fileID: 6710784643810172791}
   m_Father: {fileID: 860781400993401400}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2406803278987422233
@@ -828,7 +828,8 @@ Transform:
   m_LocalPosition: {x: -0.0016538391, y: 0.002765265, z: 8.996684e-11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7401488007109456541}
   m_Father: {fileID: 6009239351818630662}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6187433843509246281
@@ -948,7 +949,8 @@ Transform:
   m_LocalPosition: {x: -0.0031247782, y: -0.0010861112, z: 2.097149e-12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2375870034751063038}
   m_Father: {fileID: 3984300868849100050}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1183073457928381283
@@ -1063,7 +1065,7 @@ Transform:
   m_GameObject: {fileID: 3641099828034539385}
   serializedVersion: 2
   m_LocalRotation: {x: 1, y: -0, z: 0, w: -0.0000000754979}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1132,7 +1134,7 @@ GameObject:
   - component: {fileID: 469559736853751258}
   m_Layer: 6
   m_Name: wiper_B_L
-  m_TagString: Untagged
+  m_TagString: Wiper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1145,12 +1147,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3910474744436806343}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.92387956, y: 0.3826834, z: -0.000000014445907, w: -0.00000007573465}
-  m_LocalPosition: {x: -0.000001975596, y: -0.0020601747, z: -0.00004025379}
+  m_LocalRotation: {x: 7.1054274e-15, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.004582937, y: 0.002241264, z: 0.000040254334}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2737251313084468474}
+  m_Father: {fileID: 3352970768913388753}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1597920907875831921
 MeshFilter:
@@ -1232,7 +1234,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1673227888012831105}
-  - {fileID: 7401488007109456541}
   m_Father: {fileID: 1649788376370936535}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3956222033345287602
@@ -1248,7 +1249,7 @@ GameObject:
   - component: {fileID: 418705683337229101}
   m_Layer: 6
   m_Name: wiper_F_R
-  m_TagString: Untagged
+  m_TagString: Wiper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1261,12 +1262,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3956222033345287602}
   serializedVersion: 2
-  m_LocalRotation: {x: 1, y: -0, z: 0, w: -0.0000000754979}
-  m_LocalPosition: {x: 0.0020530836, y: -0.000023658647, z: -0.000040253166}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.005177862, y: -0.0010624528, z: 0.00004025237}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3984300868849100050}
+  m_Father: {fileID: 8333679863008950717}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7037433231189755582
 MeshFilter:
@@ -1364,7 +1365,7 @@ GameObject:
   - component: {fileID: 8865932018359512579}
   m_Layer: 6
   m_Name: wiper_F_L
-  m_TagString: Untagged
+  m_TagString: Wiper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1377,12 +1378,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4598725681527896407}
   serializedVersion: 2
-  m_LocalRotation: {x: 1, y: -0, z: 0, w: -0.0000000754979}
-  m_LocalPosition: {x: -0.0020601742, y: 0.000001976043, z: -0.000040253162}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0051849517, y: -0.0010880876, z: 0.000040252376}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3560451928481238968}
+  m_Father: {fileID: 1137143020699789442}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4194890061927751001
 MeshFilter:
@@ -1499,7 +1500,8 @@ Transform:
   m_LocalPosition: {x: 0.0031247782, y: -0.0010861112, z: 2.097149e-12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6710784643810172791}
   m_Father: {fileID: 3560451928481238968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7578382632666753289
@@ -2039,7 +2041,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8333679863008950717}
-  - {fileID: 2375870034751063038}
   m_Father: {fileID: 4677092750519469499}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9033806151889809445
@@ -2072,6 +2073,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3352970768913388753}
-  - {fileID: 2993290423840564465}
   m_Father: {fileID: 6344635423529196127}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -1787,9 +1787,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 370912740975586644, guid: 5ce1d1168af094c38bfe1b156df66ca9, type: 3}
+      propertyPath: m_TagString
+      value: Wiper
+      objectReference: {fileID: 0}
     - target: {fileID: 961774652236004462, guid: 5ce1d1168af094c38bfe1b156df66ca9, type: 3}
       propertyPath: m_Name
       value: beetle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3910474744436806343, guid: 5ce1d1168af094c38bfe1b156df66ca9, type: 3}
+      propertyPath: m_TagString
+      value: Wiper
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956222033345287602, guid: 5ce1d1168af094c38bfe1b156df66ca9, type: 3}
+      propertyPath: m_TagString
+      value: Wiper
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598725681527896407, guid: 5ce1d1168af094c38bfe1b156df66ca9, type: 3}
+      propertyPath: m_TagString
+      value: Wiper
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
