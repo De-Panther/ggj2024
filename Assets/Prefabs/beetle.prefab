@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 24671022548745861}
   - component: {fileID: 3600251494312279958}
   - component: {fileID: 96538061884954914}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cog_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7401488007109456541}
   - component: {fileID: 1866363042599655337}
   - component: {fileID: 6632640986326046867}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wiper_B_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1649788376370936535}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LegLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 80932249497354522}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: beetle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 8091382533411534505}
   - component: {fileID: 1048312236124931853}
   - component: {fileID: 1002246072275365972}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: head_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,7 +332,8 @@ GameObject:
   - component: {fileID: 3282063378907230042}
   - component: {fileID: 7591903125962581261}
   - component: {fileID: 3186028981693831449}
-  m_Layer: 0
+  - component: {fileID: 825063294921822684}
+  m_Layer: 6
   m_Name: forearm_B_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,6 +419,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _joint: {fileID: 2737251313084468474}
   _maxRotationAngle: 45
+--- !u!65 &825063294921822684
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782933023414070089}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0025592044, y: 0.0025592046, z: 0.0006529152}
+  m_Center: {x: -0.0039546327, y: 0.0016157525, z: 0.00074436417}
 --- !u!1 &2269381551539054977
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,7 +449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3560451928481238968}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: JointLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,7 +485,8 @@ GameObject:
   - component: {fileID: 6951054248153362359}
   - component: {fileID: 9057752635015567187}
   - component: {fileID: 5260680952983872756}
-  m_Layer: 0
+  - component: {fileID: 4435929752094317149}
+  m_Layer: 6
   m_Name: arm_B_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,6 +572,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _joint: {fileID: 1649788376370936535}
   _maxRotationAngle: 45
+--- !u!65 &4435929752094317149
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2406803278987422233}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0033643022, y: 0.0014823859, z: 0.00065011875}
+  m_Center: {x: 0.0019421048, y: 0.00078589714, z: 0.0007457624}
 --- !u!1 &2594224307994627691
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,7 +604,7 @@ GameObject:
   - component: {fileID: 6305858953206309388}
   - component: {fileID: 9078942853198015726}
   - component: {fileID: 8392523494193165158}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cog_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -644,7 +688,8 @@ GameObject:
   - component: {fileID: 4222423801747282933}
   - component: {fileID: 7960079565916915060}
   - component: {fileID: 3186665232987159524}
-  m_Layer: 0
+  - component: {fileID: 1841060571058568003}
+  m_Layer: 6
   m_Name: arm_F_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -730,6 +775,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _joint: {fileID: 860781400993401400}
   _maxRotationAngle: 45
+--- !u!65 &1841060571058568003
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2679055536798208077}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.003258607, y: 0.0014823861, z: 0.00065011875}
+  m_Center: {x: -0.001994953, y: -0.0010861113, z: 0.0007457624}
 --- !u!1 &2849350856547768040
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,7 +808,8 @@ GameObject:
   - component: {fileID: 6187433843509246281}
   - component: {fileID: 939768889429630674}
   - component: {fileID: 5576144621649611369}
-  m_Layer: 0
+  - component: {fileID: 6520468394670798953}
+  m_Layer: 6
   m_Name: forearm_B_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -828,6 +895,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _joint: {fileID: 6009239351818630662}
   _maxRotationAngle: 45
+--- !u!65 &6520468394670798953
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2849350856547768040}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0025592046, y: 0.0025592044, z: 0.0006529152}
+  m_Center: {x: 0.003954633, y: 0.0016157519, z: 0.00074436417}
 --- !u!1 &3617523608112852353
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,7 +928,8 @@ GameObject:
   - component: {fileID: 1183073457928381283}
   - component: {fileID: 8755880517686925548}
   - component: {fileID: 8657557472696041082}
-  m_Layer: 0
+  - component: {fileID: 4887313172428884659}
+  m_Layer: 6
   m_Name: forearm_F_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -926,6 +1015,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _joint: {fileID: 3984300868849100050}
   _maxRotationAngle: 45
+--- !u!65 &4887313172428884659
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3617523608112852353}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0031615768, y: 0.0013104011, z: 0.0006529152}
+  m_Center: {x: 0.0042558196, y: -0.0010861115, z: 0.00074436417}
 --- !u!1 &3641099828034539385
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,7 +1047,7 @@ GameObject:
   - component: {fileID: 3940552743085659245}
   - component: {fileID: 760196214740931458}
   - component: {fileID: 3485858875988776176}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: torso_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1020,7 +1130,7 @@ GameObject:
   - component: {fileID: 2993290423840564465}
   - component: {fileID: 1597920907875831921}
   - component: {fileID: 469559736853751258}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wiper_B_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1101,7 +1211,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6009239351818630662}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: JointRight_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1136,7 +1246,7 @@ GameObject:
   - component: {fileID: 2375870034751063038}
   - component: {fileID: 7037433231189755582}
   - component: {fileID: 418705683337229101}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wiper_F_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1217,7 +1327,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 860781400993401400}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ArmLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1252,7 +1362,7 @@ GameObject:
   - component: {fileID: 6710784643810172791}
   - component: {fileID: 4194890061927751001}
   - component: {fileID: 8865932018359512579}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wiper_F_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1333,7 +1443,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6344635423529196127}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LegRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1369,7 +1479,8 @@ GameObject:
   - component: {fileID: 7578382632666753289}
   - component: {fileID: 643095692002619832}
   - component: {fileID: 5903324849131009721}
-  m_Layer: 0
+  - component: {fileID: 5166273691734627440}
+  m_Layer: 6
   m_Name: forearm_F_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1455,6 +1566,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _joint: {fileID: 3560451928481238968}
   _maxRotationAngle: 45
+--- !u!65 &5166273691734627440
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6402934319818781485}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0031615768, y: 0.0013104011, z: 0.0006529152}
+  m_Center: {x: -0.0042558196, y: -0.0010861115, z: 0.00074436417}
 --- !u!1 &7949434567007942616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,7 +1596,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4677092750519469499}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ArmRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1499,7 +1631,7 @@ GameObject:
   - component: {fileID: 3947468808344874456}
   - component: {fileID: 3085998118298184402}
   - component: {fileID: 4998831695054710255}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cog_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1583,7 +1715,8 @@ GameObject:
   - component: {fileID: 8962780277764450649}
   - component: {fileID: 6679544756354016860}
   - component: {fileID: 165306976365982944}
-  m_Layer: 0
+  - component: {fileID: 4059321659827665017}
+  m_Layer: 6
   m_Name: arm_B_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1669,6 +1802,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _joint: {fileID: 6344635423529196127}
   _maxRotationAngle: 45
+--- !u!65 &4059321659827665017
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8391360852705507127}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0033643022, y: 0.0014823859, z: 0.00065011875}
+  m_Center: {x: -0.0019421048, y: 0.00078589714, z: 0.0007457624}
 --- !u!1 &8393787613039347889
 GameObject:
   m_ObjectHideFlags: 0
@@ -1678,7 +1832,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6778453675233823869}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1714,7 +1868,8 @@ GameObject:
   - component: {fileID: 7025210842426216623}
   - component: {fileID: 8474181464105216526}
   - component: {fileID: 3448564906488803902}
-  m_Layer: 0
+  - component: {fileID: 2170021399586614002}
+  m_Layer: 6
   m_Name: arm_F_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1800,6 +1955,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _joint: {fileID: 4677092750519469499}
   _maxRotationAngle: 45
+--- !u!65 &2170021399586614002
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8569403196034796863}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.003258607, y: 0.0014823861, z: 0.00065011875}
+  m_Center: {x: 0.001994953, y: -0.0010861113, z: 0.0007457624}
 --- !u!1 &8589374331638264822
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,7 +1985,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8071320024421059272}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1842,7 +2018,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3984300868849100050}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: JointRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1875,7 +2051,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2737251313084468474}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: JointLeft_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
