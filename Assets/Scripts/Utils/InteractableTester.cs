@@ -1,3 +1,4 @@
+using Interactables;
 using Intractables;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -17,10 +18,9 @@ namespace Utils
         
         #region --- Private Fields ---
         
-        private Camera _camera;
-        private int _zWorldLocationBasedOnCamera;
-        private InputAction mousePositionAction;
-        private Vector2 mousePosition;
+        private InputAction _mousePositionAction;
+        private Vector2 _mousePosition;
+        private IInteractable _currentlyInteracting;
         
         #endregion
         
@@ -36,26 +36,16 @@ namespace Utils
 
         private void OnEnable()
         {
-            mousePositionAction = new InputAction(binding: MOUSE_POSITION_ACTION);
-            mousePositionAction.Enable();
-            mousePositionAction.performed += UpdateMousePosition;
+            _mousePositionAction = new InputAction(binding: MOUSE_POSITION_ACTION);
+            _mousePositionAction.Enable();
+            _mousePositionAction.performed += UpdateMousePosition;
         }
         
         private void OnDisable()
         {
-            mousePositionAction.performed -= UpdateMousePosition;
-            mousePositionAction.Disable();
+            _mousePositionAction.performed -= UpdateMousePosition;
+            _mousePositionAction.Disable();
         }   
-
-        private void Start()
-        {
-            _camera = Camera.main;
-
-            if (_camera != null)
-            {
-                _zWorldLocationBasedOnCamera = (int)_camera.transform.position.z * -1;
-            }
-        }
 
         private void OnDrawGizmos()
         {
@@ -63,11 +53,25 @@ namespace Utils
             {
                 return;
             }
-    
-            Gizmos.color = _gizmoColor;    
-            var screenPosition = new Vector3(mousePosition.x, mousePosition.y, _zWorldLocationBasedOnCamera);
-            var worldPosition = _camera.ScreenToWorldPoint(screenPosition);
-            Gizmos.DrawSphere(worldPosition, _gizmoSize);
+
+            Ray ray = CameraUtils.MainCamera.ScreenPointToRay(_mousePosition);
+            RaycastHit hit;
+            IInteractable newInteracting = null;
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                Gizmos.color = _gizmoColor;
+                Vector3 worldPosition = hit.point;
+                Gizmos.DrawSphere(worldPosition, _gizmoSize);
+        
+                newInteracting = hit.transform.GetComponent<IInteractable>();
+            }
+
+            if (_currentlyInteracting == newInteracting) return;
+            
+            _currentlyInteracting?.OnTouchExit();
+            newInteracting?.OnTouchEnter();
+            _currentlyInteracting = newInteracting;
         }
         
         #endregion
@@ -95,7 +99,7 @@ namespace Utils
         
         private void UpdateMousePosition(InputAction.CallbackContext context)
         {
-            mousePosition = context.ReadValue<Vector2>();
+            _mousePosition = context.ReadValue<Vector2>();
         }
         
         #endregion

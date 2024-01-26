@@ -318,6 +318,7 @@ GameObject:
   - component: {fileID: 388878197}
   - component: {fileID: 388878196}
   - component: {fileID: 388878195}
+  - component: {fileID: 388878198}
   m_Layer: 0
   m_Name: Calve
   m_TagString: Untagged
@@ -412,6 +413,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 388878193}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &388878198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388878193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54292f0530364a52bd27587caeb7fc93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _joint: {fileID: 1864860900}
+  _maxRotationAngle: 45
 --- !u!1 &424231434
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,6 +439,7 @@ GameObject:
   - component: {fileID: 424231438}
   - component: {fileID: 424231437}
   - component: {fileID: 424231436}
+  - component: {fileID: 424231439}
   m_Layer: 0
   m_Name: Arm
   m_TagString: Untagged
@@ -517,6 +533,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424231434}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &424231439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424231434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54292f0530364a52bd27587caeb7fc93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _joint: {fileID: 240364349}
+  _maxRotationAngle: 45
 --- !u!1 &470853431
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,6 +765,7 @@ GameObject:
   - component: {fileID: 794554035}
   - component: {fileID: 794554034}
   - component: {fileID: 794554033}
+  - component: {fileID: 794554036}
   m_Layer: 0
   m_Name: Arm
   m_TagString: Untagged
@@ -828,6 +859,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794554031}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &794554036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794554031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54292f0530364a52bd27587caeb7fc93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _joint: {fileID: 1011001908}
+  _maxRotationAngle: -40
 --- !u!1 &800617649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,6 +1402,7 @@ GameObject:
   - component: {fileID: 1226429165}
   - component: {fileID: 1226429164}
   - component: {fileID: 1226429163}
+  - component: {fileID: 1226429166}
   m_Layer: 0
   m_Name: Thigh
   m_TagString: Untagged
@@ -1450,6 +1496,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226429161}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1226429166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226429161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54292f0530364a52bd27587caeb7fc93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _joint: {fileID: 1353313763}
+  _maxRotationAngle: 45
 --- !u!1 &1313300477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1665,6 +1725,7 @@ GameObject:
   - component: {fileID: 1360948933}
   - component: {fileID: 1360948932}
   - component: {fileID: 1360948931}
+  - component: {fileID: 1360948934}
   m_Layer: 0
   m_Name: Thigh
   m_TagString: Untagged
@@ -1758,6 +1819,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360948929}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1360948934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360948929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54292f0530364a52bd27587caeb7fc93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _joint: {fileID: 1313300478}
+  _maxRotationAngle: 45
 --- !u!1 &1438685114
 GameObject:
   m_ObjectHideFlags: 0
@@ -1875,6 +1950,7 @@ GameObject:
   - component: {fileID: 1444372596}
   - component: {fileID: 1444372595}
   - component: {fileID: 1444372594}
+  - component: {fileID: 1444372597}
   m_Layer: 0
   m_Name: Calve
   m_TagString: Untagged
@@ -1969,6 +2045,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444372592}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1444372597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444372592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54292f0530364a52bd27587caeb7fc93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _joint: {fileID: 24713758}
+  _maxRotationAngle: 45
 --- !u!1 &1695972798
 GameObject:
   m_ObjectHideFlags: 0
@@ -2028,6 +2118,7 @@ GameObject:
   - component: {fileID: 1829064932}
   - component: {fileID: 1829064931}
   - component: {fileID: 1829064930}
+  - component: {fileID: 1829064933}
   m_Layer: 0
   m_Name: Forearm
   m_TagString: Untagged
@@ -2122,6 +2213,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829064928}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1829064933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829064928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54292f0530364a52bd27587caeb7fc93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _joint: {fileID: 891981245}
+  _maxRotationAngle: 45
 --- !u!1 &1864860899
 GameObject:
   m_ObjectHideFlags: 0
@@ -2166,6 +2271,7 @@ GameObject:
   - component: {fileID: 2085726785}
   - component: {fileID: 2085726784}
   - component: {fileID: 2085726783}
+  - component: {fileID: 2085726786}
   m_Layer: 0
   m_Name: Forearm
   m_TagString: Untagged
@@ -2260,6 +2366,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085726781}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2085726786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085726781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54292f0530364a52bd27587caeb7fc93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _joint: {fileID: 1338895429}
+  _maxRotationAngle: -125
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
