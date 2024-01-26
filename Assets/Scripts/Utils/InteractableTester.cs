@@ -55,7 +55,15 @@ namespace Utils
             _keyAction.started -= _ => _keyIsPressed = true;
             _keyAction.canceled -= _ => _keyIsPressed = false;
             _keyAction.Disable();
-        }   
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+                ChangeInteractionType(_interactionType == InteractionType.Electrify ? InteractionType.Tickle : InteractionType.Electrify);
+            }
+        }
 
         private void OnDrawGizmos()
         {
