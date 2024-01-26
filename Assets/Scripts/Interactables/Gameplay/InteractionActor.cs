@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Interactables.Gameplay
 {
-    [RequireComponent(typeof(Rigidbody), typeof(Collider))]
+    [RequireComponent(typeof(Collider))]
     public class InteractionActor : MonoBehaviour
     {
         #region --- Inspector ---
@@ -14,11 +14,6 @@ namespace Interactables.Gameplay
 
         
         #region --- Unity Methods ---
-
-        private void Start()
-        {
-            GetComponent<Rigidbody>().useGravity = false;
-        }
 
         private void OnTriggerEnter(Collider other)
         {
