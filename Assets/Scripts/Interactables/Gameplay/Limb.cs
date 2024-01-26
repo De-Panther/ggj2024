@@ -25,6 +25,7 @@ namespace Interactables.Gameplay
         #region --- Constatns ---
         
         private const float ROTATION_SPEED = 1.5f;
+        private const string WIPER_TAG = "Wiper";
         
         #endregion
         
@@ -75,7 +76,7 @@ namespace Interactables.Gameplay
                 rootParent = rootParent.parent;
             }
 
-            var hand = FindHandForCurrentLimb(transform.gameObject, "Wiper");
+            var hand = FindHandForCurrentLimb(transform.gameObject, WIPER_TAG);
 
             if (hand == null)
             {

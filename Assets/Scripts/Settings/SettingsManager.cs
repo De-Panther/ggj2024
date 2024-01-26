@@ -1,3 +1,4 @@
+using Progress;
 using Sound;
 using UnityEngine;
 
@@ -7,20 +8,19 @@ namespace Settings
     {
         #region --- Inspector ---
         
+        [SerializeField] private GameConfig _gameConfig;
         [SerializeField] private AudioSource _mainAudio;
         [SerializeField] private AudioSource _sfxAudio;
         
         #endregion
         
         
-        #region --- Singleton ---
+        #region --- Properties ---
         
-        public static SettingsManager Instance { get; private set; }
-
         public SoundSettings SoundSettings { get; private set; }
         public SoundLibrary SoundLibrary { get; private set; }
-        
-        
+        public GameConfig GameConfig { get { return _gameConfig; } }
+
         #endregion
         
         
@@ -28,17 +28,6 @@ namespace Settings
 
         private void Awake()
         {
-            if (Instance == null)
-            {
-                Instance = this;
-            } else 
-            {
-                Destroy(gameObject);
-                return;
-            }
-       
-            DontDestroyOnLoad(gameObject);
-
             SoundLibrary = Resources.Load<SoundLibrary>("Sound/SoundLibrary");
             SoundSettings = new SoundSettings(_sfxAudio, _mainAudio);
             LoadSettings();
