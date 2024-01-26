@@ -78,11 +78,7 @@ namespace Interactables.Gameplay
 
             var hand = FindHandForCurrentLimb(transform.gameObject, WIPER_TAG);
 
-            if (hand == null)
-            {
-                LoggerService.LogError("A child with the tag 'Wiper' wasn't found, for " + transform.name);
-                return;
-            }
+            if (hand == null) { return; }
 
             var position = hand.transform.position;
             var initialHandPosition = position;
