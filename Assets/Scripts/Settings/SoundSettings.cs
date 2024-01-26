@@ -4,14 +4,26 @@ namespace Settings
 {
     public class SoundSettings
     {
+        #region --- Constants ---
+        
         private const string MAIN_VOL = "mainVolume";
         private const string SFX_VOL = "sfxVolume";
         private const string MAIN_MUTE = "mainMute";
         private const string SFX_MUTE = "sfxMute";
         private const string ALL_MUTE = "allMute";
+        
+        #endregion
+        
+        
+        #region --- Fields ---
 
         private readonly AudioSource _sfxAudioSource;
         private readonly AudioSource _mainAudioSource;
+        
+        #endregion
+        
+        
+        #region --- Constructor ---
     
         public SoundSettings(AudioSource sfxAudioSource, AudioSource mainAudioSource)
         {
@@ -20,6 +32,11 @@ namespace Settings
 
             Load();
         }
+        
+        #endregion
+        
+        
+        #region --- Public Methods ---
 
         public void SetMainVolume(float value)
         {
@@ -51,6 +68,36 @@ namespace Settings
             SetSfxMute(isMute);
             PlayerPrefs.SetInt(ALL_MUTE, isMute ? 1 : 0);
         }
+        
+        public void SetMainAudioClip(AudioClip audioClip)
+        {
+            _mainAudioSource.clip = audioClip;
+        }
+        
+        public void SetSfxAudioClip(AudioClip audioClip)
+        {
+            _sfxAudioSource.clip = audioClip;
+        }
+        
+        public void PlayMainAudioClip()
+        {
+            _mainAudioSource.Play();
+        }
+        
+        public void PlaySfxAudioClip()
+        {
+            _sfxAudioSource.Play();
+        }
+        
+        public void StopMainAudioClip()
+        {
+            _mainAudioSource.Stop();
+        }
+        
+        public void StopSfxAudioClip()
+        {
+            _sfxAudioSource.Stop();
+        }
 
         public void Load()
         {
@@ -69,5 +116,7 @@ namespace Settings
                 _sfxAudioSource.mute = PlayerPrefs.GetInt(SFX_MUTE, 0) == 1;
             }
         }
+        
+        #endregion
     }
 }

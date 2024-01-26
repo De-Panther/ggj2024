@@ -1,3 +1,4 @@
+using Sound;
 using UnityEngine;
 
 namespace Settings
@@ -17,6 +18,7 @@ namespace Settings
         public static SettingsManager Instance { get; private set; }
 
         public SoundSettings SoundSettings { get; private set; }
+        public SoundLibrary SoundLibrary { get; private set; }
         
         
         #endregion
@@ -37,6 +39,7 @@ namespace Settings
        
             DontDestroyOnLoad(gameObject);
 
+            SoundLibrary = Resources.Load<SoundLibrary>("Sound/SoundLibrary");
             SoundSettings = new SoundSettings(_sfxAudio, _mainAudio);
             LoadSettings();
         }
