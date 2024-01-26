@@ -11,6 +11,8 @@ TagManager:
   - 
   - Water
   - UI
+  - Robot
+  - IgnoreRobot
   - 
   - 
   - 
@@ -19,11 +21,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Webcam
+  - WebcamLighting
+  - Spectator
   - 
   - 
   - 
