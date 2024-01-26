@@ -23,12 +23,16 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _CleanMap:
+        m_Texture: {fileID: 8400000, guid: 3fc48a3a746254030be5e1a81a9e6043, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _DirtTex:
-        m_Texture: {fileID: 2800000, guid: dab08e5d84e5843658213143a0eaeb82, type: 3}
+        m_Texture: {fileID: 2800000, guid: e4f309670938543548d032f0c97fdd92, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 8400000, guid: 3fc48a3a746254030be5e1a81a9e6043, type: 2}
+        m_Texture: {fileID: 2800000, guid: 323e734c56102e643a829e6f33533314, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
