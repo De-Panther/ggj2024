@@ -5,27 +5,19 @@ using Utils;
 public class Draggable3D : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
   private Vector3 position;
-  private float timeCount = 0.0f;
+  private bool dragging = false;
 
   public void OnBeginDrag(PointerEventData eventData)
   {
     position = transform.position;
-    Debug.Log("OnBeginDrag: " + position);
+    Vector3 cameraRelative = CameraUtils.MainCamera.transform.InverseTransformPoint(transform.position);
+    position.z = cameraRelative.z;
+    dragging = true;
   }
 
   // Drag the selected item.
   public void OnDrag(PointerEventData data)
   {
-    if (data.dragging)
-    {
-      // Object is being dragged.
-      timeCount += Time.deltaTime;
-      if (timeCount > 0.25f)
-      {
-        Debug.Log("Dragging:" + data.position);
-        timeCount = 0.0f;
-      }
-    }
     position.x = data.position.x;
     position.y = data.position.y;
     transform.position = CameraUtils.MainCamera.ScreenToWorldPoint(position);
@@ -36,6 +28,15 @@ public class Draggable3D : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     position.x = eventData.position.x;
     position.y = eventData.position.y;
     transform.position = CameraUtils.MainCamera.ScreenToWorldPoint(position);
-    Debug.Log("OnEndDrag: " + position);
+    dragging = false;
+  }
+
+  private void Update()
+  {
+    if (!dragging)
+    {
+      return;
+    }
+    transform.position = CameraUtils.MainCamera.ScreenToWorldPoint(position);
   }
 }
