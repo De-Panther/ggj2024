@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c3b97770d644ad79690be0a1f895f88, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
-  gameDuration: 10
+  gameDuration: 60
