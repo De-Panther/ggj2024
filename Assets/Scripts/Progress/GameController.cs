@@ -30,6 +30,17 @@ namespace Progress
         #endregion
         
         
+        #region --- Properties ---
+
+        public bool InProgress
+        {
+            get;
+            private set;
+        }
+        
+        #endregion
+        
+        
         #region --- Singleton Pattern ---
 
         public static GameController Instance { get; private set; } 
@@ -116,13 +127,16 @@ namespace Progress
         private IEnumerator GameFlow()
         {
             OnGameStart?.Invoke();
+            InProgress = true;
             yield return new WaitForSeconds(10); // Substitute with your game duration
             OnGameEnd?.Invoke();
+            InProgress = false;
         }
 
         [ContextMenu("ResetGameFlow %r")]
         public void ResetGameFlow()
         {
+            _settingsManager.SoundSettings.StopSfxAudioClip();
             StopAllCoroutines();
             ResetScene();
             StartCoroutine(GameFlow());
