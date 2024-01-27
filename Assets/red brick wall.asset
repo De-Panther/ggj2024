@@ -1,0 +1,406 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a6b9796d1c0440eba061ace5e9dff6, type: 3}
+  m_Name: red brick wall
+  m_EditorClassIdentifier: 
+  assetsData:
+  - rid: 2235466090363486788
+  - rid: 2235466090363486794
+  - rid: 2235466090363486800
+  - rid: 2235466090363486806
+  currentMode: TextToImage
+  m_Data:
+  - rid: 2235466090363486779
+  - rid: 2235466090363486780
+  - rid: 2235466090363486781
+  - rid: 2235466090363486782
+  preRefinedArtifact:
+    rid: -2
+  refinedArtifact:
+    rid: -2
+  selectedArtifact:
+    rid: 2235466090363486800
+  m_Operators:
+  - rid: 2235466090363486783
+  - rid: 2235466090363486784
+  - rid: 2235466090363486785
+  - rid: 2235466090363486786
+  - rid: 2235466090363486787
+  m_PreRefineOperators: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 2235466090363486779
+      type: {class: FeedbackManager, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_Liked:
+          m_Values: []
+        m_Disliked:
+          m_Values: []
+    - rid: 2235466090363486780
+      type: {class: MainUI/UISize, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_NodeListWidth: 300
+        m_NodeListRefineWidth: 300
+        m_AssetListRefineWidth: 200
+    - rid: 2235466090363486781
+      type: {class: GenerateButtonData, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data: 
+    - rid: 2235466090363486782
+      type: {class: BookmarkManager, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_BookmarkedArtifacts:
+          m_Values: []
+        m_IsFilterEnabled: 0
+    - rid: 2235466090363486783
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486784
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - red brick wall
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486785
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486786
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.2
+          settings:
+          - 
+          - 
+          - 1
+          - 20
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486787
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          - 1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486788
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: b64064e1-37f2-41dc-8690-4d25e0919c9d
+        Seed: 902917391
+        m_Operators:
+        - rid: 2235466090363486789
+        - rid: 2235466090363486790
+        - rid: 2235466090363486791
+        - rid: 2235466090363486792
+        - rid: 2235466090363486793
+        history:
+        - rid: 2235466090363486788
+        IsPbrMode: 0
+    - rid: 2235466090363486789
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486790
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - red brick wall
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486791
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486792
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.2
+          settings:
+          - 
+          - 
+          - 0
+          - 20
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486793
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          - 1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486794
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: aa9bc404-8084-4618-9193-5a7c925a7a75
+        Seed: 2074387603
+        m_Operators:
+        - rid: 2235466090363486795
+        - rid: 2235466090363486796
+        - rid: 2235466090363486797
+        - rid: 2235466090363486798
+        - rid: 2235466090363486799
+        history:
+        - rid: 2235466090363486794
+        IsPbrMode: 0
+    - rid: 2235466090363486795
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486796
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - red brick wall
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486797
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486798
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.2
+          settings:
+          - 
+          - 
+          - 0
+          - 20
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486799
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          - 1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486800
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 9c689b50-5e02-41f9-8ad8-99628ccf1626
+        Seed: 3830188727
+        m_Operators:
+        - rid: 2235466090363486801
+        - rid: 2235466090363486802
+        - rid: 2235466090363486803
+        - rid: 2235466090363486804
+        - rid: 2235466090363486805
+        history:
+        - rid: 2235466090363486800
+        IsPbrMode: 0
+    - rid: 2235466090363486801
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486802
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - red brick wall
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486803
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486804
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.2
+          settings:
+          - 
+          - 
+          - 0
+          - 20
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486805
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          - 1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486806
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: ae598d10-f122-4337-ae85-2348dab52a1d
+        Seed: 520731980
+        m_Operators:
+        - rid: 2235466090363486807
+        - rid: 2235466090363486808
+        - rid: 2235466090363486809
+        - rid: 2235466090363486810
+        - rid: 2235466090363486811
+        history:
+        - rid: 2235466090363486806
+        IsPbrMode: 0
+    - rid: 2235466090363486807
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486808
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - red brick wall
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486809
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486810
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.2
+          settings:
+          - 
+          - 
+          - 0
+          - 20
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486811
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          - 1
+          enabled: 0
+          assembly: 

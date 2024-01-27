@@ -1,0 +1,694 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a6b9796d1c0440eba061ace5e9dff6, type: 3}
+  m_Name: yellow wall
+  m_EditorClassIdentifier: 
+  assetsData:
+  - rid: 2235466090363486821
+  - rid: 2235466090363486827
+  - rid: 2235466090363486833
+  - rid: 2235466090363486839
+  - rid: 2235466090363486845
+  - rid: 2235466090363486851
+  - rid: 2235466090363486857
+  - rid: 2235466090363486863
+  currentMode: TextToImage
+  m_Data:
+  - rid: 2235466090363486812
+  - rid: 2235466090363486813
+  - rid: 2235466090363486814
+  - rid: 2235466090363486815
+  preRefinedArtifact:
+    rid: -2
+  refinedArtifact:
+    rid: -2
+  selectedArtifact:
+    rid: 2235466090363486857
+  m_Operators:
+  - rid: 2235466090363486816
+  - rid: 2235466090363486817
+  - rid: 2235466090363486818
+  - rid: 2235466090363486819
+  - rid: 2235466090363486820
+  m_PreRefineOperators: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 2235466090363486812
+      type: {class: FeedbackManager, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_Liked:
+          m_Values: []
+        m_Disliked:
+          m_Values: []
+    - rid: 2235466090363486813
+      type: {class: MainUI/UISize, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_NodeListWidth: 300
+        m_NodeListRefineWidth: 300
+        m_AssetListRefineWidth: 200
+    - rid: 2235466090363486814
+      type: {class: GenerateButtonData, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data: 
+    - rid: 2235466090363486815
+      type: {class: BookmarkManager, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_BookmarkedArtifacts:
+          m_Values: []
+        m_IsFilterEnabled: 0
+    - rid: 2235466090363486816
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486817
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - smooth yellow wall
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486818
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486819
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.2
+          settings:
+          - 
+          - 
+          - 0
+          - 20
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486820
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          - 1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486821
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: dc9eb628-6210-46a9-87f0-4570061f9e3f
+        Seed: 3114191571
+        m_Operators:
+        - rid: 2235466090363486822
+        - rid: 2235466090363486823
+        - rid: 2235466090363486824
+        - rid: 2235466090363486825
+        - rid: 2235466090363486826
+        history:
+        - rid: 2235466090363486821
+        IsPbrMode: 0
+    - rid: 2235466090363486822
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486823
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - yellow wall
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486824
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486825
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.2
+          settings:
+          - 
+          - 
+          - 0
+          - 20
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486826
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          - 1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486827
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 73281f35-2f17-406c-9334-30fd0c9d8c7e
+        Seed: 1510479230
+        m_Operators:
+        - rid: 2235466090363486828
+        - rid: 2235466090363486829
+        - rid: 2235466090363486830
+        - rid: 2235466090363486831
+        - rid: 2235466090363486832
+        history:
+        - rid: 2235466090363486827
+        IsPbrMode: 0
+    - rid: 2235466090363486828
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486829
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - yellow wall
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486830
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486831
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.2
+          settings:
+          - 
+          - 
+          - 0
+          - 20
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486832
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          - 1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486833
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 438f2637-7dff-421b-8682-75efec645da4
+        Seed: 3324374687
+        m_Operators:
+        - rid: 2235466090363486834
+        - rid: 2235466090363486835
+        - rid: 2235466090363486836
+        - rid: 2235466090363486837
+        - rid: 2235466090363486838
+        history:
+        - rid: 2235466090363486833
+        IsPbrMode: 0
+    - rid: 2235466090363486834
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486835
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - yellow wall
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486836
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486837
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.2
+          settings:
+          - 
+          - 
+          - 0
+          - 20
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486838
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          - 1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486839
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 2c9b6293-77f3-4883-9ca9-230b1b0890eb
+        Seed: 1211260385
+        m_Operators:
+        - rid: 2235466090363486840
+        - rid: 2235466090363486841
+        - rid: 2235466090363486842
+        - rid: 2235466090363486843
+        - rid: 2235466090363486844
+        history:
+        - rid: 2235466090363486839
+        IsPbrMode: 0
+    - rid: 2235466090363486840
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486841
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - yellow wall
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486842
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486843
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.2
+          settings:
+          - 
+          - 
+          - 0
+          - 20
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486844
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          - 1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486845
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 14a8d864-fb2d-4499-83ae-3fb05c264a35
+        Seed: 2728939293
+        m_Operators:
+        - rid: 2235466090363486846
+        - rid: 2235466090363486847
+        - rid: 2235466090363486848
+        - rid: 2235466090363486849
+        - rid: 2235466090363486850
+        history:
+        - rid: 2235466090363486845
+        IsPbrMode: 0
+    - rid: 2235466090363486846
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486847
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - smooth yellow wall
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486848
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486849
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.2
+          settings:
+          - 
+          - 
+          - 0
+          - 20
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486850
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          - 1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486851
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: a8f16190-19ed-4f31-ba60-48f609605610
+        Seed: 235151447
+        m_Operators:
+        - rid: 2235466090363486852
+        - rid: 2235466090363486853
+        - rid: 2235466090363486854
+        - rid: 2235466090363486855
+        - rid: 2235466090363486856
+        history:
+        - rid: 2235466090363486851
+        IsPbrMode: 0
+    - rid: 2235466090363486852
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486853
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - smooth yellow wall
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486854
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486855
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.2
+          settings:
+          - 
+          - 
+          - 0
+          - 20
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486856
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          - 1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486857
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: 064361ab-4d69-475d-91b7-f2d24a4c3d75
+        Seed: 4249300087
+        m_Operators:
+        - rid: 2235466090363486858
+        - rid: 2235466090363486859
+        - rid: 2235466090363486860
+        - rid: 2235466090363486861
+        - rid: 2235466090363486862
+        history:
+        - rid: 2235466090363486857
+        IsPbrMode: 0
+    - rid: 2235466090363486858
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486859
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - smooth yellow wall
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486860
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486861
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.2
+          settings:
+          - 
+          - 
+          - 0
+          - 20
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486862
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          - 1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486863
+      type: {class: ImageArtifact, ns: Unity.Muse.Texture, asm: Unity.Muse.Texture}
+      data:
+        Guid: b22232cd-ba90-4a29-b2b7-df44e73f149c
+        Seed: 2185317828
+        m_Operators:
+        - rid: 2235466090363486864
+        - rid: 2235466090363486865
+        - rid: 2235466090363486866
+        - rid: 2235466090363486867
+        - rid: 2235466090363486868
+        history:
+        - rid: 2235466090363486863
+        IsPbrMode: 0
+    - rid: 2235466090363486864
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          version: 0.0.1
+          settings:
+          - TextToImage
+          - 4
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486865
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          version: 0.0.2
+          settings:
+          - smooth yellow wall
+          - 
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486866
+      type: {class: LoraOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: LoraOperator
+          version: 0.0.1
+          settings:
+          - guid1
+          enabled: 0
+          assembly: 
+    - rid: 2235466090363486867
+      type: {class: ReferenceOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: ReferenceOperator
+          version: 0.0.2
+          settings:
+          - 
+          - 
+          - 0
+          - 20
+          enabled: 1
+          assembly: 
+    - rid: 2235466090363486868
+      type: {class: MaskOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: MaskOperator
+          version: 0.0.1
+          settings:
+          - 
+          - True
+          - 1
+          enabled: 0
+          assembly: 
