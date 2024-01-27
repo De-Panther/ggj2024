@@ -1,4 +1,5 @@
 using Interactables;
+using Interactables.Gameplay;
 using Intractables;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -91,7 +92,7 @@ namespace Utils
             
             if (_keyIsPressed)
             {
-                newInteracting?.OnTouchEnter(_interactionType);
+                newInteracting?.OnTouchEnter(_interactionType, Direction.East);
             } 
 
             _currentlyInteracting = newInteracting;

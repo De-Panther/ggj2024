@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8335020179262790086}
   - component: {fileID: 8921672024641174376}
   m_Layer: 6
-  m_Name: arm_B_R
+  m_Name: leg_B_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _joint: {fileID: 7699723959356060197}
-  _maxRotationAngle: 45
 --- !u!65 &8921672024641174376
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -348,7 +347,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _joint: {fileID: 4651707830562034767}
-  _maxRotationAngle: 45
 --- !u!65 &8894283670830954684
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -582,7 +580,7 @@ GameObject:
   - component: {fileID: 342554530061912888}
   - component: {fileID: 8546312319676080503}
   m_Layer: 6
-  m_Name: arm_B_L
+  m_Name: leg_B_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -666,7 +664,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _joint: {fileID: 4503583939366293473}
-  _maxRotationAngle: 45
 --- !u!65 &8546312319676080503
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -950,7 +947,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _joint: {fileID: 754549032366834447}
-  _maxRotationAngle: 45
 --- !u!65 &5264139002462056895
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1306,7 +1302,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _joint: {fileID: 1517306727878577977}
-  _maxRotationAngle: 45
 --- !u!65 &4491474711706606984
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1708,7 +1703,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _joint: {fileID: 48249589967849550}
-  _maxRotationAngle: 45
 --- !u!65 &4416911849375361438
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1744,7 +1738,7 @@ GameObject:
   - component: {fileID: 2948738394944130739}
   - component: {fileID: 3028704696306115729}
   m_Layer: 6
-  m_Name: forearm_B_L
+  m_Name: calve_B_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1829,7 +1823,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _joint: {fileID: 873956261938327484}
-  _maxRotationAngle: 45
 --- !u!65 &3028704696306115729
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1964,7 +1957,7 @@ GameObject:
   - component: {fileID: 3195756586197381390}
   - component: {fileID: 87011938070172854}
   m_Layer: 6
-  m_Name: forearm_B_R
+  m_Name: calve_B_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2049,7 +2042,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _joint: {fileID: 5461340316249861055}
-  _maxRotationAngle: 45
 --- !u!65 &87011938070172854
 BoxCollider:
   m_ObjectHideFlags: 0

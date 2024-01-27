@@ -10,7 +10,6 @@ namespace Interactables.Gameplay
         #region --- Inspector ---
 
         [SerializeField] private Transform _joint;
-        [SerializeField] private float _maxRotationAngle = 45f; // maximum rotation angle in degrees
         
         #endregion
         
@@ -19,6 +18,7 @@ namespace Interactables.Gameplay
         
         private bool _isBeingTouched = false;
         private bool _modifierEnabled = false;
+        private Direction _direction;
         
         #endregion
         
@@ -63,11 +63,12 @@ namespace Interactables.Gameplay
 
         #region --- Public Methods ---
         
-        public void OnTouchEnter(InteractionType interactionType)
+        public void OnTouchEnter(InteractionType interactionType, Direction direction)
         {
             LoggerService.LogWarning($"OnTouchEnter: {gameObject.name}");
             _isBeingTouched = true;
             _modifierEnabled = (interactionType == InteractionType.Electrify);
+            _direction = direction;
             PlaySfx(_modifierEnabled);
         }
 
@@ -108,8 +109,10 @@ namespace Interactables.Gameplay
 
             var position = hand.transform.position;
             var initialHandPosition = position;
+            var direction = _direction == Direction.West ? -1 : 1;
+            LoggerService.LogInfo("Rotate Body Direction is: " + _direction);
 
-            rootParent.RotateAround(position, Vector3.forward, Time.deltaTime * ROTATION_SPEED * 10f);
+            rootParent.RotateAround(position, Vector3.forward, Time.deltaTime * ROTATION_SPEED * 10f * direction);
             var movement = position - initialHandPosition;
             rootParent.position -= movement;  
         }
@@ -121,7 +124,9 @@ namespace Interactables.Gameplay
             var touchPositionWorld = CameraUtils.MainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, z));
             var touchDirection = touchPositionWorld - position;
 
-            var angleModifier = _modifierEnabled ? -1 : 1;
+            var angleModifier = _direction == Direction.North ? -1 : 1;
+            
+            LoggerService.LogInfo("Rotate Limb Direction is: " + _direction);
             var angle = Vector3.SignedAngle(_joint.up, touchDirection, -Vector3.forward) * angleModifier; 
 
             _joint.Rotate(Vector3.forward, angle * Time.deltaTime * ROTATION_SPEED, Space.World);
