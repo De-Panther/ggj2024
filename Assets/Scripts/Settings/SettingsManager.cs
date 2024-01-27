@@ -11,6 +11,7 @@ namespace Settings
         [SerializeField] private GameConfig _gameConfig;
         [SerializeField] private AudioSource _mainAudio;
         [SerializeField] private AudioSource _sfxAudio;
+        [SerializeField] private AudioSource _mainTrack;
         
         #endregion
         
@@ -29,7 +30,7 @@ namespace Settings
         private void Awake()
         {
             SoundLibrary = Resources.Load<SoundLibrary>("Sound/SoundLibrary");
-            SoundSettings = new SoundSettings(_sfxAudio, _mainAudio);
+            SoundSettings = new SoundSettings(_sfxAudio, _mainAudio, _mainTrack);
             LoadSettings();
         }
         

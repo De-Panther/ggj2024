@@ -19,16 +19,18 @@ namespace Settings
 
         private readonly AudioSource _sfxAudioSource;
         private readonly AudioSource _mainAudioSource;
+        private readonly AudioSource _mainTrack;
         
         #endregion
         
         
         #region --- Constructor ---
     
-        public SoundSettings(AudioSource sfxAudioSource, AudioSource mainAudioSource)
+        public SoundSettings(AudioSource sfxAudioSource, AudioSource mainAudioSource, AudioSource mainTrack)
         {
             _sfxAudioSource = sfxAudioSource;
             _mainAudioSource = mainAudioSource;
+            _mainTrack = mainTrack;
 
             Load();
         }
@@ -53,6 +55,7 @@ namespace Settings
         public void SetMainMute(bool isMute)
         {
             _mainAudioSource.mute = isMute;
+            _mainTrack.mute = isMute;
             PlayerPrefs.SetInt(MAIN_MUTE, isMute ? 1 : 0);
         }
 
@@ -83,6 +86,7 @@ namespace Settings
         
         public void PlayMainAudioClip()
         {
+            _mainTrack.Play();
             _mainAudioSource.Play();
         }
         
@@ -93,6 +97,7 @@ namespace Settings
         
         public void StopMainAudioClip()
         {
+            _mainTrack.Stop();
             _mainAudioSource.Stop();
         }
         
@@ -103,18 +108,21 @@ namespace Settings
 
         public void Load()
         {
-            _mainAudioSource.volume = PlayerPrefs.GetFloat(MAIN_VOL, 0.75f);
+            _mainAudioSource.volume = PlayerPrefs.GetFloat(MAIN_VOL, 0.5f);
+            _mainTrack.volume = PlayerPrefs.GetFloat(MAIN_VOL, 0.75f);
             _sfxAudioSource.volume = PlayerPrefs.GetFloat(SFX_VOL, 0.75f);
 
             bool allMute = PlayerPrefs.GetInt(ALL_MUTE, 0) == 1;
             if (allMute)
             {
                 _mainAudioSource.mute = true;
+                _mainTrack.mute = true;
                 _sfxAudioSource.mute = true;
             }
             else
             {
                 _mainAudioSource.mute = PlayerPrefs.GetInt(MAIN_MUTE, 0) == 1;
+                _mainTrack.mute = PlayerPrefs.GetInt(MAIN_MUTE, 0) == 1;
                 _sfxAudioSource.mute = PlayerPrefs.GetInt(SFX_MUTE, 0) == 1;
             }
         }
