@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 8212481929454978494}
   - component: {fileID: 3245436228149884657}
   - component: {fileID: 5009523191990144182}
+  - component: {fileID: 4859927577903569414}
   m_Layer: 0
   m_Name: Window
   m_TagString: Untagged
@@ -63,13 +64,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608715790697769229}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 1.05, z: 2.5}
-  m_LocalScale: {x: 1.4, y: 1.5, z: 0.2}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4380344636154328795}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!33 &8212481929454978494
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -98,7 +99,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 384bbce3fe7fe3e4c970de109d7b283f, type: 2}
+  - {fileID: 2100000, guid: 0b5dda863205742aaa95709b5ad4359d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -141,6 +142,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4859927577903569414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608715790697769229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4125daf836555864b82b072e7d73a4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windowTexture: {fileID: 8400000, guid: 3fc48a3a746254030be5e1a81a9e6043, type: 2}
 --- !u!1 &2174771010093676250
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,8 +183,8 @@ Transform:
   m_GameObject: {fileID: 2174771010093676250}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.05, z: 2.74}
-  m_LocalScale: {x: 1.6, y: 1.7, z: 0.5}
+  m_LocalPosition: {x: 0, y: 1.05, z: 2.662}
+  m_LocalScale: {x: 1.6, y: 1.6, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4380344636154328795}
@@ -379,7 +393,7 @@ Transform:
   m_GameObject: {fileID: 2951134564549689163}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 3}
+  m_LocalPosition: {x: 0, y: 1, z: 2.951}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -483,7 +497,7 @@ Transform:
   m_GameObject: {fileID: 5079812492858361040}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -524,7 +538,7 @@ Camera:
   far clip plane: 5
   field of view: 60
   orthographic: 1
-  orthographic size: 0.8
+  orthographic size: 0.7
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DirtyWindow
+  m_Name: DynamicWindow
   m_Shader: {fileID: 4800000, guid: 2bcc63182802f47a1891f636b3dd5d6a, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -25,6 +25,10 @@ Material:
     m_TexEnvs:
     - _CleanMap:
         m_Texture: {fileID: 8400000, guid: 3fc48a3a746254030be5e1a81a9e6043, type: 2}
+        m_Scale: {x: 1.22, y: 1}
+        m_Offset: {x: -0.13, y: 0}
+    - _CleanTex:
+        m_Texture: {fileID: 2800000, guid: 816593f4daf0a12478be1f575a868d43, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DirtTex:
@@ -32,7 +36,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 57c63b90ae92048179c5c08105f8ffec, type: 3}
+        m_Texture: {fileID: 8400000, guid: 3fc48a3a746254030be5e1a81a9e6043, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []

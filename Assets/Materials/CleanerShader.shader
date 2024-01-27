@@ -4,7 +4,7 @@ Shader "Custom/CleanerShader"
     {
         _MainTex("Main Texture", 2D) = "white" {}
         _DirtTex("Dirt Texture", 2D) = "white" {}
-        _CleanMap("Clean Map", 2D) = "white" {}
+        _CleanTex("Clean Texture", 2D) = "white" {}
     }
     SubShader
     {
@@ -30,7 +30,7 @@ Shader "Custom/CleanerShader"
 
             sampler2D _MainTex;
             sampler2D _DirtTex;
-            sampler2D _CleanMap;
+            sampler2D _CleanTex;
             float4 _MainTex_ST;
 
             v2f vert(appdata v)
@@ -45,10 +45,10 @@ Shader "Custom/CleanerShader"
             {
                 fixed4 mainColor = tex2D(_MainTex, i.uv);
                 fixed4 dirtColor = tex2D(_DirtTex, i.uv);
-                fixed4 cleanMapColor = tex2D(_CleanMap, i.uv);
+                fixed4 cleanColor = tex2D(_CleanTex, i.uv);
                 fixed4 color;
 
-                color.rgb = lerp(mainColor.rgb, dirtColor.rgb, min(max(cleanMapColor.r * 100, 0), 1));
+                color.rgb = lerp(dirtColor.rgb, cleanColor.rgb, min(max(mainColor.r * 100, 0), 1));
                 color.a = 1.0;
 
                 return color;
