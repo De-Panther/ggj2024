@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Utils;
+using Progress;
 
 public class Draggable3D : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -21,6 +22,7 @@ public class Draggable3D : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     position.x = data.position.x;
     position.y = data.position.y;
     transform.position = CameraUtils.MainCamera.ScreenToWorldPoint(position);
+    OnStartedDrag();
   }
 
   public void OnEndDrag(PointerEventData eventData)
@@ -38,5 +40,14 @@ public class Draggable3D : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
       return;
     }
     transform.position = CameraUtils.MainCamera.ScreenToWorldPoint(position);
+  }
+
+  public void OnStartedDrag()
+  {
+    if (GameController.Instance.InProgress)
+    {
+      return;
+    }
+    GameController.Instance.StartGame();
   }
 }

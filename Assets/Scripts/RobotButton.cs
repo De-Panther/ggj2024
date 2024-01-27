@@ -20,7 +20,7 @@ public class RobotButton : MonoBehaviour
 
   void OnDisable()
   {
-    GameController.OnGameEnd += HandleOnGameEnd;
+    GameController.OnGameEnd -= HandleOnGameEnd;
   }
 
   void HandleOnGameEnd()
@@ -30,7 +30,6 @@ public class RobotButton : MonoBehaviour
 
   public void OnButtonSelect()
   {
-    // todo: reset level
-    Debug.LogError("OnButtonSelect");
+    GameController.Instance.ResetGameFlow();
   }
 }

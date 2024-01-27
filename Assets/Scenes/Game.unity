@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 884602955}
-  m_IndirectSpecularColor: {r: 0.4439372, g: 0.49315345, b: 0.5721989, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2729,11 +2729,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5245436614995711421, guid: 1644f8f6d950f87408375866a875e80d, type: 3}
       propertyPath: m_arCullingMask.m_Bits
-      value: 247
+      value: 1271
       objectReference: {fileID: 0}
     - target: {fileID: 5245436614995711421, guid: 1644f8f6d950f87408375866a875e80d, type: 3}
       propertyPath: m_vrCullingMask.m_Bits
-      value: 247
+      value: 1271
       objectReference: {fileID: 0}
     - target: {fileID: 5245436614995711421, guid: 1644f8f6d950f87408375866a875e80d, type: 3}
       propertyPath: m_normalBackgroundColor.a
@@ -2753,7 +2753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5245436614995711421, guid: 1644f8f6d950f87408375866a875e80d, type: 3}
       propertyPath: m_normalCullingMask.m_Bits
-      value: 65783
+      value: 66807
       objectReference: {fileID: 0}
     - target: {fileID: 5732866412101818074, guid: 1644f8f6d950f87408375866a875e80d, type: 3}
       propertyPath: m_CullingMask.m_Bits
@@ -2837,11 +2837,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7427464093582542180, guid: 1644f8f6d950f87408375866a875e80d, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 98551
+      value: 99575
       objectReference: {fileID: 0}
     - target: {fileID: 8069357165708143912, guid: 1644f8f6d950f87408375866a875e80d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8475604866238012342, guid: 1644f8f6d950f87408375866a875e80d, type: 3}
+      propertyPath: m_RaycastMask.m_Bits
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 8576013539990019261, guid: 1644f8f6d950f87408375866a875e80d, type: 3}
       propertyPath: m_PhysicsLayerMask.m_Bits
@@ -5830,7 +5834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8014676552849558642, guid: caa6800791b6a7345a7f0bce4ae01e59, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 98807
+      value: 99831
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

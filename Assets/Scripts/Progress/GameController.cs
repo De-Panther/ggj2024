@@ -71,12 +71,12 @@ namespace Progress
             AudioSetup();
             _window.SetActive(false);
             _currentInstances = new GameObject[_prefabs.Length];
-            ResetScene();        
+            ResetScene();
         }
 
         public void StartGame()
         {
-            ResetGameFlow();
+            StartCoroutine(GameFlow());
         }
         
         public void PlaySfx(string soundName)
@@ -122,15 +122,17 @@ namespace Progress
 
             _window.SetActive(false);
             _window.SetActive(true);
+            InProgress = false;
         }
 
         private IEnumerator GameFlow()
         {
+            Debug.LogError("Start Game " +Time.time);
             OnGameStart?.Invoke();
             InProgress = true;
-            yield return new WaitForSeconds(10); // Substitute with your game duration
+            yield return new WaitForSeconds(_settingsManager.GameConfig.gameDuration); // Substitute with your game duration
             OnGameEnd?.Invoke();
-            InProgress = false;
+            Debug.LogError("End Game " +Time.time);
         }
 
         [ContextMenu("ResetGameFlow %r")]
@@ -139,7 +141,6 @@ namespace Progress
             _settingsManager.SoundSettings.StopSfxAudioClip();
             StopAllCoroutines();
             ResetScene();
-            StartCoroutine(GameFlow());
         }
 
         public void PauseGame() 
