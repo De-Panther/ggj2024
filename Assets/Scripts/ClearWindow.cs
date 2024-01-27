@@ -4,7 +4,7 @@ public class ClearWindow : MonoBehaviour
 {
   public RenderTexture windowTexture;
 
-  void Start()
+  private void OnEnable()
   {
     windowTexture.Release();
   }

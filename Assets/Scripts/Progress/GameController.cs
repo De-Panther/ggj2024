@@ -14,6 +14,10 @@ namespace Progress
         public static event Action OnGamePause;
         public static event Action OnGameResume;
         private SettingsManager _settingsManager;
+
+        [SerializeField] private GameObject[] _prefabs; // Initialize with your original GameObjects in the Unity Editor
+        private GameObject[] _currentInstances;
+        [SerializeField] private GameObject _window;
         
         #endregion
 
@@ -28,7 +32,7 @@ namespace Progress
         
         #region --- Singleton Pattern ---
 
-        public static GameController Instance { get; private set; } // Singleton instance
+        public static GameController Instance { get; private set; } 
 
         private void Awake()
         {
@@ -54,11 +58,14 @@ namespace Progress
         private void Start()
         {
             AudioSetup();
+            _window.SetActive(false);
+            _currentInstances = new GameObject[_prefabs.Length];
+            ResetScene();        
         }
 
         public void StartGame()
         {
-            StartCoroutine(GameFlow());
+            ResetGameFlow();
         }
         
         public void PlaySfx(string soundName)
@@ -83,18 +90,42 @@ namespace Progress
             OnGameResume -= listener.OnGameResume;
             OnGameResume += listener.OnGameResume;
         }
-        
+
         #endregion
         
         
         #region --- Private Methods ---
+        
+        private void ResetScene()
+        {
+            for (int i = 0; i < _currentInstances.Length; i++)
+            {
+                if (_currentInstances[i] != null)
+                {
+                    Destroy(_currentInstances[i]);
+                }
+
+                _currentInstances[i] = Instantiate(_prefabs[i], _prefabs[i].transform.parent);
+                _currentInstances[i].SetActive(true);
+            }
+
+            _window.SetActive(false);
+            _window.SetActive(true);
+        }
 
         private IEnumerator GameFlow()
         {
-            Time.timeScale = 1; 
             OnGameStart?.Invoke();
-            yield return new WaitForSeconds(_settingsManager.GameConfig.gameDuration);
+            yield return new WaitForSeconds(10); // Substitute with your game duration
             OnGameEnd?.Invoke();
+        }
+
+        [ContextMenu("ResetGameFlow %r")]
+        public void ResetGameFlow()
+        {
+            StopAllCoroutines();
+            ResetScene();
+            StartCoroutine(GameFlow());
         }
 
         public void PauseGame() 
@@ -105,7 +136,7 @@ namespace Progress
 
         public void ResumeGame() 
         {
-            Time.timeScale = 1; 
+            Time.timeScale = 1;
             OnGameResume?.Invoke();
         }
         
@@ -115,12 +146,12 @@ namespace Progress
             _settingsManager = Instantiate(settingsManager, transform);
         }
 
-        private void AudioSetup()
+        private void AudioSetup() 
         {
             var main = _settingsManager.SoundLibrary.GetSound(WIND);
             _settingsManager.SoundSettings.SetMainAudioClip(main.clip).Play();
         }
-        
+                
         #endregion
     }
 }
