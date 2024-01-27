@@ -72,6 +72,18 @@ namespace Progress
             _settingsManager.SoundSettings.StopSfxAudioClip();
         }
         
+        public void AddGameProgressionListener(IGameProgressListener listener)
+        {
+            OnGameStart -= listener.OnGameStart;
+            OnGameStart += listener.OnGameStart;
+            OnGameEnd -= listener.OnGameEnd;
+            OnGameEnd += listener.OnGameEnd;
+            OnGamePause -= listener.OnGamePause;
+            OnGamePause += listener.OnGamePause;
+            OnGameResume -= listener.OnGameResume;
+            OnGameResume += listener.OnGameResume;
+        }
+        
         #endregion
         
         

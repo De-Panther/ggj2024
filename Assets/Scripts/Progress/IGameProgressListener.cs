@@ -5,5 +5,6 @@ namespace Progress
         public void OnGameStart();
         public void OnGameEnd();
         public void OnGamePause();
+        public void OnGameResume();
     }
 }
