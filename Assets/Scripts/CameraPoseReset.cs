@@ -2,17 +2,18 @@ using UnityEngine;
 
 public class CameraPoseReset : MonoBehaviour
 {
-  private Vector3 startPosition;
-  private Quaternion startRotation;
+  [SerializeField]
+  private Vector3 _startPosition;
+  [SerializeField]
+  private Quaternion _startRotation;
+  [SerializeField]
+  private Camera _camera;
+  private float _fieldOfView = 60;
 
-  private void Awake()
+  public void DoResetPose()
   {
-    startPosition = transform.localPosition;
-    startRotation = transform.localRotation;
-  }
-
-  public void ResetPose()
-  {
-    transform.SetLocalPositionAndRotation(startPosition, startRotation);
+    transform.SetLocalPositionAndRotation(_startPosition, _startRotation);
+    _camera.fieldOfView = _fieldOfView;
+    _camera.ResetProjectionMatrix();
   }
 }
