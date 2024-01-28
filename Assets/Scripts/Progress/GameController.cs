@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Settings;
 using UnityEngine;
+using TMPro;
 
 namespace Progress
 {
@@ -13,11 +14,15 @@ namespace Progress
         public static event Action OnGameEnd;
         public static event Action OnGamePause;
         public static event Action OnGameResume;
+        public static event Action OnGameReset;
         private SettingsManager _settingsManager;
 
         [SerializeField] private GameObject[] _prefabs; // Initialize with your original GameObjects in the Unity Editor
         private GameObject[] _currentInstances;
         [SerializeField] private GameObject _window;
+        [SerializeField] private TMP_Text _timer;
+        [SerializeField] private RenderTexture _windowFront;
+        private float _percentageCleaned = 0;
         
         #endregion
 
@@ -100,6 +105,8 @@ namespace Progress
             OnGamePause += listener.OnGamePause;
             OnGameResume -= listener.OnGameResume;
             OnGameResume += listener.OnGameResume;
+            OnGameReset -= listener.OnGameReset;
+            OnGameReset += listener.OnGameReset;
         }
 
         #endregion
@@ -122,17 +129,25 @@ namespace Progress
 
             _window.SetActive(false);
             _window.SetActive(true);
+            _timer.text = _settingsManager.GameConfig.gameDuration.ToString();
             InProgress = false;
+            OnGameReset?.Invoke();
         }
 
         private IEnumerator GameFlow()
         {
-            Debug.LogError("Start Game " +Time.time);
             OnGameStart?.Invoke();
             InProgress = true;
-            yield return new WaitForSeconds(_settingsManager.GameConfig.gameDuration); // Substitute with your game duration
+            float endTime = Time.time + _settingsManager.GameConfig.gameDuration;
+            var waitForOneSecond = new WaitForSeconds(1f);
+            while (Time.time < endTime)
+            {
+              _timer.text = MathF.Ceiling(endTime - Time.time).ToString();
+              yield return waitForOneSecond;
+            }
+            _timer.text = "0";
+            CalcWindowClean();
             OnGameEnd?.Invoke();
-            Debug.LogError("End Game " +Time.time);
         }
 
         [ContextMenu("ResetGameFlow %r")]
@@ -154,6 +169,11 @@ namespace Progress
             Time.timeScale = 1;
             OnGameResume?.Invoke();
         }
+
+        public int GetScore()
+        {
+            return Mathf.CeilToInt(_percentageCleaned * 100);
+        }
         
         private void LoadSettings()
         {
@@ -165,6 +185,26 @@ namespace Progress
         {
             var main = _settingsManager.SoundLibrary.GetSound(WIND);
             _settingsManager.SoundSettings.SetMainAudioClip(main.clip).Play();
+        }
+
+        private void CalcWindowClean()
+        {
+            RenderTexture cachedRenderTexture = RenderTexture.active;
+            RenderTexture.active = _windowFront;
+            Texture2D tempTexture = new Texture2D(_windowFront.width, _windowFront.height);
+            tempTexture.ReadPixels(new Rect(0, 0, tempTexture.width, tempTexture.height), 0, 0);
+            RenderTexture.active = cachedRenderTexture;
+            Color32[] pixels = tempTexture.GetPixels32(0);
+            Destroy(tempTexture);
+            int coloredPixels = 0;
+            for (int i = 0; i < pixels.Length; i++)
+            {
+                if (pixels[i].r > 0 || pixels[i].g > 0 || pixels[i].b > 0)
+                {
+                  coloredPixels++;
+                }
+            }
+            _percentageCleaned = (float)coloredPixels / (float)pixels.Length;
         }
                 
         #endregion

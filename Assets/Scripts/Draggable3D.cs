@@ -5,32 +5,40 @@ using Progress;
 
 public class Draggable3D : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-  private Vector3 position;
+  private Vector3 screenPosition;
   private bool dragging = false;
+  private Vector3 startPosition;
+  public float zLimit;
+
+  private void Awake()
+  {
+    startPosition = transform.position;
+  }
 
   public void OnBeginDrag(PointerEventData eventData)
   {
-    position = transform.position;
+    screenPosition = transform.position;
     Vector3 cameraRelative = CameraUtils.MainCamera.transform.InverseTransformPoint(transform.position);
-    position.z = cameraRelative.z;
+    screenPosition.z = cameraRelative.z;
     dragging = true;
   }
 
   // Drag the selected item.
   public void OnDrag(PointerEventData data)
   {
-    position.x = data.position.x;
-    position.y = data.position.y;
-    transform.position = CameraUtils.MainCamera.ScreenToWorldPoint(position);
+    screenPosition.x = data.position.x;
+    screenPosition.y = data.position.y;
+    transform.position = CameraUtils.MainCamera.ScreenToWorldPoint(screenPosition);
     OnStartedDrag();
   }
 
   public void OnEndDrag(PointerEventData eventData)
   {
-    position.x = eventData.position.x;
-    position.y = eventData.position.y;
-    transform.position = CameraUtils.MainCamera.ScreenToWorldPoint(position);
+    screenPosition.x = eventData.position.x;
+    screenPosition.y = eventData.position.y;
+    transform.position = CameraUtils.MainCamera.ScreenToWorldPoint(screenPosition);
     dragging = false;
+    OnEndedDrag();
   }
 
   private void Update()
@@ -39,7 +47,7 @@ public class Draggable3D : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
       return;
     }
-    transform.position = CameraUtils.MainCamera.ScreenToWorldPoint(position);
+    transform.position = CameraUtils.MainCamera.ScreenToWorldPoint(screenPosition);
   }
 
   public void OnStartedDrag()
@@ -49,5 +57,15 @@ public class Draggable3D : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
       return;
     }
     GameController.Instance.StartGame();
+  }
+
+  public void OnEndedDrag()
+  {
+    if (transform.position.z > zLimit)
+    {
+      var position = transform.position;
+      position.z = startPosition.z;
+      transform.position = position;
+    }
   }
 }
