@@ -20,12 +20,12 @@ namespace Sound
         public Sound GetSound(string soundName)
         {
             var sound = _sounds.Find(s => s.name == soundName);
-            
+#if UNITY_EDITOR 
             if (sound == null)
             {
                 LoggerService.LogWarning($"Sound with name {soundName} not found!");
             }
-            
+#endif
             return sound;
         }
         

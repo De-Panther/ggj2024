@@ -65,7 +65,9 @@ namespace Interactables.Gameplay
         
         public void OnTouchEnter(InteractionType interactionType, Direction direction)
         {
+#if UNITY_EDITOR
             LoggerService.LogWarning($"OnTouchEnter: {gameObject.name}");
+#endif
             _isBeingTouched = true;
             _modifierEnabled = (interactionType == InteractionType.Electrify);
             _direction = direction;
@@ -74,7 +76,9 @@ namespace Interactables.Gameplay
 
         public void OnTouchExit()
         {
+#if UNITY_EDITOR
             LoggerService.LogWarning($"OnTouchExit: {gameObject.name}");
+#endif
             _isBeingTouched = false;
             StopPlaySfx();
         }
@@ -110,8 +114,9 @@ namespace Interactables.Gameplay
             var position = hand.transform.position;
             var initialHandPosition = position;
             var direction = _direction == Direction.West ? -1 : 1;
+#if UNITY_EDITOR
             LoggerService.LogInfo("Rotate Body Direction is: " + _direction);
-
+#endif
             rootParent.RotateAround(position, Vector3.forward, Time.deltaTime * ROTATION_SPEED * 10f * direction);
             var movement = position - initialHandPosition;
             rootParent.position -= movement;  
@@ -125,8 +130,9 @@ namespace Interactables.Gameplay
             var touchDirection = touchPositionWorld - position;
 
             var angleModifier = _direction == Direction.North ? -1 : 1;
-            
+#if UNITY_EDITOR
             LoggerService.LogInfo("Rotate Limb Direction is: " + _direction);
+#endif
             var angle = Vector3.SignedAngle(_joint.up, touchDirection, -Vector3.forward) * angleModifier; 
 
             _joint.Rotate(Vector3.forward, angle * Time.deltaTime * ROTATION_SPEED, Space.World);
