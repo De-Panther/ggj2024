@@ -1,6 +1,8 @@
 # GGJ2024 - Zoorba: The Window Cleaning Robot
 Global Game Jam 2024
 
+![Zoorba: The Window Cleaning Robot](/FeatureImage.png)
+
 ## Links
 https://globalgamejam.org/games/2024/zoorba-window-cleaning-robot-7
 
